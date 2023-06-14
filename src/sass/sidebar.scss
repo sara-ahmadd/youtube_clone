@@ -1,0 +1,67 @@
+@import "./global/colors.scss";
+
+.side_bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 15%;
+  padding: 0 15px;
+  overflow-y: scroll;
+  max-height: 89vh;
+  overflow-x: hidden;
+  .section {
+    h3 {
+      font-weight: normal;
+    }
+    .icons_list {
+      .list_item {
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        transition: 0.3s linear;
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        &:hover {
+          background-color: $light-grey;
+          font-weight: bold;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          justify-content: flex-start;
+          padding-left: 15px;
+          width: 100%;
+          font-size: 17px;
+          color: $black;
+          svg,
+          div {
+            width: 30px;
+            height: 30px;
+          }
+          div {
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+          span {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    color: $light-grey;
+    height: 1px;
+  }
+}
