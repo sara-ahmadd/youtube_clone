@@ -9,7 +9,7 @@
 .video_card .img,
 .channel_card .img {
   width: 100%;
-  height: 40%;
+  height: 200px;
 }
 .video_card .img img,
 .channel_card .img img {

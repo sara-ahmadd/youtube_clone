@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import SideBar from "./components/SideBar";
 import Home from "./components/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import VideoDetails from "./components/VideoDetails";
+import ChannelDetails from "./components/ChannelDetails";
 
 function App() {
   const [hideSidebar, setHideSidebar] = useState(true);
