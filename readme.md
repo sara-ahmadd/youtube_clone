@@ -1,6 +1,6 @@
 # YOUTUBE CLONE
 
-- This project is clone of the youtube website but with a bit limited features.
+- This project is a clone of the youtube website but with a bit limited features.
 
 ## Technologies used:
 
