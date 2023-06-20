@@ -23,6 +23,9 @@ a {
   width: 100%;
   margin: 0 auto;
   padding-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 /* width */
@@ -47,7 +50,7 @@ a {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(209, 205, 205);
+  background: rgb(132, 132, 132);
 }
 
 /*# sourceMappingURL=index.css.map */

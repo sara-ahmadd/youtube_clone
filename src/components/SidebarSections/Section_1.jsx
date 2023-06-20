@@ -3,33 +3,36 @@ import { MdHomeFilled } from "react-icons/md";
 import shorts from "./../../images/blach-shorts.svg";
 import subs from "./../../images/subscription.svg";
 import "./../../css/sidebar.css";
+import { NavLink } from "react-router-dom";
 
-function Section_1() {
+function Section_1({ categorySelected, setCategorySelected }) {
   return (
     <>
       <div className="section">
         <ul className="icons_list">
           <li className="list_item">
-            <a href=".">
+            <NavLink to="/">
               <MdHomeFilled />
-              <span>Home</span>
-            </a>
+              <span onClick={() => setCategorySelected("Home")}>Home</span>
+            </NavLink>
           </li>
           <li className="list_item">
-            <a href=".">
+            <NavLink to="/">
               <div>
                 <img src={shorts} alt="shorts" />
               </div>
-              <span>Shorts</span>
-            </a>
+              <span onClick={() => setCategorySelected("Shorts")}>Shorts</span>
+            </NavLink>
           </li>
           <li className="list_item">
-            <a href=".">
+            <NavLink to="/">
               <div>
                 <img src={subs} alt="subscriptions" />
               </div>
-              <span>Subscriptions</span>
-            </a>
+              <span onClick={() => setCategorySelected("Subscriptions")}>
+                Subscriptions
+              </span>
+            </NavLink>
           </li>
         </ul>
       </div>

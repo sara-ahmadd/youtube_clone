@@ -7,18 +7,18 @@ import cup from "./../../images/cup.svg";
 import "./../../css/sidebar.css";
 import { NavLink } from "react-router-dom";
 
-function Section_3({ categorySelected, setCategorySelected }) {
+function Section_4({ categorySelected, setCategorySelected }) {
   const staticData = [
-    { img: trend, text: "Trending" },
-    { img: music, text: "Music" },
-    { img: live, text: "Live" },
-    { img: game, text: "Gaming" },
-    { img: cup, text: "Sports" },
+    { img: trend, text: "Education" },
+    { img: music, text: "NextJs" },
+    { img: live, text: "ReactJs" },
+    { img: game, text: "Coding" },
+    { img: cup, text: "Podcast" },
   ];
   return (
     <>
       <div className="section">
-        <h3>Explore</h3>
+        <h3>Subscriptions</h3>
         <ul className="icons_list">
           {staticData.map((item) => {
             return (
@@ -41,4 +41,4 @@ function Section_3({ categorySelected, setCategorySelected }) {
   );
 }
 
-export default Section_3;
+export default Section_4;

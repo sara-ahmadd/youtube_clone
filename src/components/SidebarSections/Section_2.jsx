@@ -6,52 +6,34 @@ import watch_later from "./../../images/watch-later.svg";
 import like from "./../../images/like.svg";
 import "./../../css/sidebar.css";
 import { IoIosArrowDown } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
-function Section_2() {
+function Section_2({ categorySelected, setCategorySelected }) {
+  const staticData = [
+    { img: library, text: "Library" },
+    { img: history, text: "History" },
+    { img: video, text: "Your Videos" },
+    { img: watch_later, text: "Watch Later" },
+    { img: like, text: "Liked Videos" },
+  ];
   return (
     <>
       <div className="section">
         <ul className="icons_list">
-          <li className="list_item">
-            <a href=".">
-              <div>
-                <img src={library} alt="library" />
-              </div>
-              <span>Library</span>
-            </a>
-          </li>
-          <li className="list_item">
-            <a href=".">
-              <div>
-                <img src={history} alt="history" />
-              </div>
-              <span>History</span>
-            </a>
-          </li>
-          <li className="list_item">
-            <a href=".">
-              <div>
-                <img src={video} alt="your_videos" />
-              </div>
-              <span>Your Videos</span>
-            </a>
-          </li>
-          <li className="list_item">
-            <a href=".">
-              <div>
-                <img src={watch_later} alt="watch_later" />
-              </div>
-              <span>Watch Later</span>
-            </a>
-          </li>
-          <li className="list_item">
-            <a href=".">
-              <div>
-                <img src={like} alt="like" />
-              </div>
-              <span>Liked Videos</span>
-            </a>
-          </li>
+          {staticData.map((item) => {
+            return (
+              <li className="list_item" key={item.text}>
+                <NavLink to="/">
+                  <div>
+                    <img src={item.img} alt={item.text} />
+                  </div>
+                  <span onClick={() => setCategorySelected(item.text)}>
+                    {item.text}
+                  </span>
+                </NavLink>
+              </li>
+            );
+          })}
           <li className="list_item">
             <a href=".">
               <IoIosArrowDown />

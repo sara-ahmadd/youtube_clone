@@ -1,8 +1,10 @@
 .side_bar {
+  background-color: #fff;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 15%;
+  width: 16%;
   padding: 0 15px;
   overflow-y: scroll;
   max-height: 89vh;
@@ -56,6 +58,29 @@
   width: 100%;
   color: rgb(232, 230, 230);
   height: 1px;
+}
+.side_bar footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  line-height: 7px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 0 15px 15px;
+}
+.side_bar footer .links li a {
+  color: grey;
+  font-size: 15px;
+}
+.side_bar footer p {
+  color: rgb(132, 132, 132);
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .side_bar {
+    width: 60%;
+  }
 }
 
 /*# sourceMappingURL=sidebar.css.map */

@@ -37,6 +37,9 @@
 .nav_bar .logo .burger_btn:hover {
   background-color: rgb(232, 230, 230);
 }
+.nav_bar .logo .burger_btn:focus {
+  outline: none;
+}
 .nav_bar .logo .burger_btn svg {
   width: 100%;
   height: 100%;
@@ -93,7 +96,7 @@
   -o-transition: 0.3s linear;
 }
 .nav_bar .search .search_icon:hover {
-  background-color: rgb(209, 205, 205);
+  background-color: rgb(132, 132, 132);
 }
 .nav_bar .search .search_icon svg {
   font-size: 19px;
@@ -108,6 +111,9 @@
   .nav_bar .search .search_icon {
     background-color: transparent;
     margin: 0;
+  }
+  .nav_bar .search .search_icon:hover {
+    background-color: transparent;
   }
 }
 .nav_bar .notifications {
@@ -141,6 +147,7 @@
 }
 @media (max-width: 786px) {
   .nav_bar .notifications {
+    padding-bottom: 20px;
     width: 30%;
   }
 }

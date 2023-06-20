@@ -1,0 +1,31 @@
+.video_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+.video_card .img {
+  width: 100%;
+  height: 40%;
+}
+.video_card .img img {
+  width: 100%;
+  height: 100%;
+}
+.video_card .text {
+  display: inherit;
+}
+.video_card .text .description,
+.video_card .text .channel_name,
+.video_card .text .views {
+  padding: 10px;
+}
+.video_card .text .views {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/*# sourceMappingURL=channel_card.css.map */
