@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 .video_card .img,
@@ -23,8 +23,18 @@
 }
 .video_card .channel_img,
 .channel_card .channel_img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+.video_card .channel_img img,
+.channel_card .channel_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -46,6 +56,7 @@
 .channel_card .text .channel_name,
 .channel_card .text .views {
   color: rgb(132, 132, 132);
+  font-size: 15px;
 }
 .video_card .text .description,
 .channel_card .text .description {
