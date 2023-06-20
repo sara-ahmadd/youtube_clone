@@ -5,15 +5,18 @@ import live from "./../../images/live.svg";
 import game from "./../../images/game.svg";
 import cup from "./../../images/cup.svg";
 import "./../../css/sidebar.css";
+import { BiCode } from "react-icons/bi";
+import { BiCodeCurly } from "react-icons/bi";
+import { LuPodcast } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
 function Section_4({ categorySelected, setCategorySelected }) {
   const staticData = [
-    { img: trend, text: "Education" },
-    { img: music, text: "NextJs" },
-    { img: live, text: "ReactJs" },
-    { img: game, text: "Coding" },
-    { img: cup, text: "Podcast" },
+    { img: <BiCodeCurly />, text: "Education" },
+    { img: <BiCode />, text: "NextJs" },
+    { img: <BiCode />, text: "ReactJs" },
+    { img: <BiCode />, text: "Coding" },
+    { img: <LuPodcast />, text: "Podcast" },
   ];
   return (
     <>
@@ -24,9 +27,7 @@ function Section_4({ categorySelected, setCategorySelected }) {
             return (
               <li className="list_item" key={item.text}>
                 <NavLink to="/">
-                  <div>
-                    <img src={item.img} alt={item.text} />
-                  </div>
+                  {item.img}
                   <span onClick={() => setCategorySelected(item.text)}>
                     {item.text}
                   </span>

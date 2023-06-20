@@ -17,7 +17,7 @@ function VideoCard({ video }) {
   return (
     <div className="video_card">
       <div className="img">
-        <img src={video.snippet.thumbnails.medium.url} alt="img" />
+        <img src={video?.snippet?.thumbnails?.medium?.url} alt="img" />
       </div>
       <div className="text">
         <Link to={`/video/${video.id.videoId}`} className="description">
@@ -30,7 +30,7 @@ function VideoCard({ video }) {
           {video.snippet.channelTitle}
         </Link>
         <div className="views">
-          <p>{video.snippet.publishedAt}</p>
+          <p>{video?.snippet?.publishedAt}</p>
         </div>
       </div>
     </div>
