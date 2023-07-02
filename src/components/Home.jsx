@@ -5,6 +5,7 @@ import MiniSideBar from "./MiniSideBar";
 import VideoCard from "./VideoCard";
 import ChannelCard from "./ChannelCard";
 import "./../css/home.css";
+import VideosGrid from "./VideosGrid";
 
 function Home({ side_bar, categorySelected, setCategorySelected }) {
   const [videos, setVideos] = useState([]);
@@ -31,19 +32,7 @@ function Home({ side_bar, categorySelected, setCategorySelected }) {
       )}
       <div className="feed">
         <h3>{categorySelected}</h3>
-        <div className="videos-grid">
-          {videos &&
-            videos.length > 0 &&
-            videos.map((item, id) => {
-              {
-                return item.id.videoId ? (
-                  <VideoCard video={item} key={id} />
-                ) : (
-                  item.id.channelId && <ChannelCard channel={item} key={id} />
-                );
-              }
-            })}
-        </div>
+        <VideosGrid videos={videos} />
       </div>
     </div>
   );

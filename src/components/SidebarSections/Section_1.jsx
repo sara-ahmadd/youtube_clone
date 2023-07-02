@@ -3,38 +3,45 @@ import { MdHomeFilled } from "react-icons/md";
 import shorts from "./../../images/blach-shorts.svg";
 import subs from "./../../images/subscription.svg";
 import "./../../css/sidebar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Section_1({ categorySelected, setCategorySelected }) {
   return (
     <>
       <div className="section">
-        <ul className="icons_list">
-          <li className="list_item">
-            <NavLink to="/">
+        <div className="icons_list">
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Latest")}
+          >
+            <div className="content">
               <MdHomeFilled />
-              <span onClick={() => setCategorySelected("Home")}>Home</span>
-            </NavLink>
-          </li>
-          <li className="list_item">
-            <NavLink to="/">
+              <span>Home</span>
+            </div>
+          </button>
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Shorts")}
+          >
+            <div className="content">
               <div>
                 <img src={shorts} alt="shorts" />
               </div>
-              <span onClick={() => setCategorySelected("Shorts")}>Shorts</span>
-            </NavLink>
-          </li>
-          <li className="list_item">
-            <NavLink to="/">
+              <span>Shorts</span>
+            </div>
+          </button>
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Subscriptions")}
+          >
+            <div className="content">
               <div>
                 <img src={subs} alt="subscriptions" />
               </div>
-              <span onClick={() => setCategorySelected("Subscriptions")}>
-                Subscriptions
-              </span>
-            </NavLink>
-          </li>
-        </ul>
+              <span>Subscriptions</span>
+            </div>
+          </button>
+        </div>
       </div>
       <hr />
     </>

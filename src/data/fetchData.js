@@ -4,11 +4,13 @@ const BASE_URL = "https://youtube-v31.p.rapidapi.com";
 
 const options = {
   params: {
-    part: "id,snippet",
+    part: "snippet",
     maxResults: "50",
+    regionCode: "EG",
+    order: "date",
   },
   headers: {
-    "X-RapidAPI-Key": import.meta.env.VITE_RAPID_API_KEY,
+    "X-RapidAPI-Key": `${import.meta.env.VITE_RAPID_API_KEY}`,
     "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
   },
 };

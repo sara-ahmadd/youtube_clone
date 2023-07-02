@@ -3,19 +3,8 @@ import "./../css/video_card.css";
 import { Link } from "react-router-dom";
 
 function VideoCard({ video }) {
-  const timeStamp = () => {
-    const currDate = new Date();
-    console.log(
-      `${currDate.getFullYear()}-${
-        currDate.getMonth() + 1
-      }-${currDate.getDate()}`
-    );
-  };
-  useEffect(() => {
-    timeStamp();
-  });
   return (
-    <div className="video_card">
+    <div className="video_card" title={`${video.snippet.title}`}>
       <div className="img">
         <img src={video?.snippet?.thumbnails?.medium?.url} alt="img" />
       </div>
@@ -30,7 +19,7 @@ function VideoCard({ video }) {
           {video.snippet.channelTitle}
         </Link>
         <div className="views">
-          <p>{video?.snippet?.publishedAt}</p>
+          <p>Published at {video?.snippet?.publishedAt.slice(0, 10)}</p>
         </div>
       </div>
     </div>

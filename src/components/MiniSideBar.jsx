@@ -11,39 +11,48 @@ function MiniSideBar({ setCategorySelected }) {
     <div className="mini_side_bar">
       <div className="section">
         <ul className="icons_list">
-          <li className="list_item">
-            <NavLink to="/" onClick={() => setCategorySelected("Home")}>
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Latest")}
+          >
+            <div className="content">
               <MdHomeFilled />
               <span>Home</span>
-            </NavLink>
-          </li>
-          <li className="list_item">
-            <NavLink to="/" onClick={() => setCategorySelected("Shorts")}>
+            </div>
+          </button>
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Shorts")}
+          >
+            <div className="content">
               <div>
                 <img src={shorts} alt="shorts" />
               </div>
               <span>Shorts</span>
-            </NavLink>
-          </li>
-          <li className="list_item">
-            <NavLink
-              to="/"
-              onClick={() => setCategorySelected("Subscriptions")}
-            >
+            </div>
+          </button>
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Subscriptions")}
+          >
+            <div className="content">
               <div>
                 <img src={subs} alt="subscriptions" />
               </div>
               <span>Subscriptions</span>
-            </NavLink>
-          </li>
-          <li className="list_item">
-            <NavLink to="/" onClick={() => setCategorySelected("Library")}>
+            </div>
+          </button>
+          <button
+            className="list_item"
+            onClick={() => setCategorySelected("Library")}
+          >
+            <div className="content">
               <div>
                 <img src={library} alt="library" />
               </div>
               <span>Library</span>
-            </NavLink>
-          </li>
+            </div>
+          </button>
         </ul>
       </div>
     </div>

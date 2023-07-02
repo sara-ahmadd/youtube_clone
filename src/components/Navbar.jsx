@@ -45,15 +45,6 @@ const Navbar = ({
           <BsSearch />
         </button>
       </div>
-      <div className="notifications">
-        <div className="bell">
-          <span className="count">+9</span>
-          <BsBell />
-        </div>
-        <div className="user">
-          <AiOutlineUser />
-        </div>
-      </div>
     </div>
   );
 };

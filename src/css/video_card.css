@@ -55,7 +55,7 @@
 .channel_card .text .description,
 .channel_card .text .channel_name,
 .channel_card .text .views {
-  color: rgb(132, 132, 132);
+  color: rgb(177, 175, 175);
   font-size: 15px;
 }
 .video_card .text .description,

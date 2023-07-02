@@ -13,7 +13,13 @@
 .side_bar .section h3 {
   font-weight: normal;
 }
+.side_bar .section .icons_list {
+  display: flex;
+  flex-direction: column;
+}
 .side_bar .section .icons_list .list_item {
+  border: none;
+  cursor: pointer;
   padding: 10px 0;
   width: 100%;
   border-radius: 10px;
@@ -27,12 +33,14 @@
   -moz-transition: 0.3s linear;
   -ms-transition: 0.3s linear;
   -o-transition: 0.3s linear;
+  background-color: transparent;
+  font-weight: normal;
 }
-.side_bar .section .icons_list .list_item:hover {
-  background-color: rgb(232, 230, 230);
+.side_bar .section .icons_list .list_item:hover, .side_bar .section .icons_list .list_item:focus {
+  background-color: rgb(237, 237, 237);
   font-weight: bold;
 }
-.side_bar .section .icons_list .list_item a {
+.side_bar .section .icons_list .list_item .content {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -42,21 +50,21 @@
   font-size: 17px;
   color: #000;
 }
-.side_bar .section .icons_list .list_item a svg,
-.side_bar .section .icons_list .list_item a div {
+.side_bar .section .icons_list .list_item .content svg,
+.side_bar .section .icons_list .list_item .content div {
   width: 30px;
   height: 30px;
 }
-.side_bar .section .icons_list .list_item a div img {
+.side_bar .section .icons_list .list_item .content div img {
   height: 100%;
   width: 100%;
 }
-.side_bar .section .icons_list .list_item a span {
+.side_bar .section .icons_list .list_item .content span {
   padding: 5px;
 }
 .side_bar hr {
   width: 100%;
-  color: rgb(232, 230, 230);
+  color: rgb(237, 237, 237);
   height: 1px;
 }
 .side_bar footer .links {
@@ -74,7 +82,7 @@
   font-size: 15px;
 }
 .side_bar footer p {
-  color: rgb(132, 132, 132);
+  color: rgb(177, 175, 175);
   font-size: 15px;
 }
 @media (max-width: 768px) {

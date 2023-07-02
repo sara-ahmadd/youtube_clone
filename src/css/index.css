@@ -40,7 +40,7 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(232, 230, 230);
+  background: rgb(237, 237, 237);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -50,7 +50,7 @@ a {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(132, 132, 132);
+  background: rgb(177, 175, 175);
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -16,7 +16,11 @@
       font-weight: normal;
     }
     .icons_list {
+      display: flex;
+      flex-direction: column;
       .list_item {
+        border: none;
+        cursor: pointer;
         padding: 10px 0;
         width: 100%;
         border-radius: 10px;
@@ -30,11 +34,14 @@
         -moz-transition: 0.3s linear;
         -ms-transition: 0.3s linear;
         -o-transition: 0.3s linear;
-        &:hover {
+        background-color: transparent;
+        font-weight: normal;
+        &:hover,
+        &:focus {
           background-color: $light-grey;
           font-weight: bold;
         }
-        a {
+        .content {
           display: flex;
           align-items: center;
           gap: 15px;
