@@ -9,20 +9,20 @@
     padding-left: 0;
     padding: 5px;
   }
-  .videos-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    place-items: center;
-    gap: 10px;
-    grid-auto-rows: minmax(250px, 300px);
-    @media (max-width: 1440px) {
-      grid-template-columns: repeat(3, minmax(250px, 350px));
-    }
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(2, minmax(250px, 350px));
-    }
-    @media (max-width: 425px) {
-      grid-template-columns: 1fr;
-    }
+}
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  gap: 10px;
+  grid-auto-rows: minmax(250px, 300px);
+  @media (max-width: 2500px) {
+    grid-template-columns: repeat(4, minmax(250px, 350px));
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(250px, 350px));
+  }
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
   }
 }

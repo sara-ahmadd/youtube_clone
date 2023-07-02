@@ -10,7 +10,7 @@ function VideoCard({ video }) {
       </div>
       <div className="text">
         <Link to={`/video/${video.id.videoId}`} className="description">
-          {video.snippet.title.slice(0, 50)}
+          {video.snippet.title.slice(0, 50)}...
         </Link>
         <Link
           to={`/channel/${video.snippet.channelId}`}

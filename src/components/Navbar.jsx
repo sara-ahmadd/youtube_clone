@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsBell } from "react-icons/bs";
@@ -7,18 +7,13 @@ import { BsSearch } from "react-icons/bs";
 import logo from "./../images/logo.svg";
 import "./../css/navbar.css";
 
-const Navbar = ({
-  side_bar,
-  set_side_bar,
-  categorySelected,
-  setCategorySelected,
-}) => {
+const Navbar = ({ side_bar, set_side_bar, setCategorySelected }) => {
   const [searchText, setSearchText] = useState("");
   const hideSideBar = () => {
     set_side_bar(!side_bar);
   };
   const updateSearchText = (searchText) => {
-    setCategorySelected(searchText);
+    setCategorySelected(`Results For : ${searchText}`);
   };
   return (
     <div className="nav_bar">
@@ -40,9 +35,14 @@ const Navbar = ({
         <button
           className="search_icon"
           type="submit"
-          onClick={() => updateSearchText(searchText)}
+          onClick={() => {
+            updateSearchText(searchText);
+            setSearchText("");
+          }}
         >
-          <BsSearch />
+          <Link to={"/"}>
+            <BsSearch />
+          </Link>
         </button>
       </div>
     </div>

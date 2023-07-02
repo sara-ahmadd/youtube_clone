@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 10px;
 }
 .video_card .img,
@@ -61,6 +60,8 @@
 .video_card .text .description,
 .channel_card .text .description {
   color: #000;
+  word-wrap: break-word;
+  height: 30px;
 }
 .video_card .text .views,
 .channel_card .text .views {

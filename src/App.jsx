@@ -9,7 +9,7 @@ import ChannelDetails from "./components/ChannelDetails";
 
 function App() {
   const [hideSidebar, setHideSidebar] = useState(true);
-  const [categorySelected, setCategorySelected] = useState("Home");
+  const [categorySelected, setCategorySelected] = useState("New");
   return (
     <BrowserRouter>
       <div className="App">
@@ -31,7 +31,16 @@ function App() {
             }
           />
           <Route path="/video/:video_Id" element={<VideoDetails />} />
-          <Route path="/channel/:channel_Id" element={<ChannelDetails />} />
+          <Route
+            path="/channel/:channel_Id"
+            element={
+              <ChannelDetails
+                side_bar={hideSidebar}
+                categorySelected={categorySelected}
+                setCategorySelected={setCategorySelected}
+              />
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>

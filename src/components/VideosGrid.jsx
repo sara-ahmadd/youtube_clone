@@ -1,6 +1,7 @@
 import React from "react";
 import VideoCard from "./VideoCard";
 import ChannelCard from "./ChannelCard";
+import "./../css/home.css";
 
 function VideosGrid({ videos }) {
   return (

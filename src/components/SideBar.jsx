@@ -7,10 +7,11 @@ import Section_2 from "./SidebarSections/Section_2";
 import Section_1 from "./SidebarSections/Section_1";
 import Section_3 from "./SidebarSections/Section_3";
 import Section_4 from "./SidebarSections/Section_4";
+import { Link } from "react-router-dom";
 
 function SideBar({ categorySelected, setCategorySelected }) {
   return (
-    <div className="side_bar">
+    <Link to={"/"} className="side_bar">
       <Section_1
         categorySelected={categorySelected}
         setCategorySelected={setCategorySelected}
@@ -70,7 +71,7 @@ function SideBar({ categorySelected, setCategorySelected }) {
         </ul>
         <p>&copy; 2023 Google LLC</p>
       </footer>
-    </div>
+    </Link>
   );
 }
 

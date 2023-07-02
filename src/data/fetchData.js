@@ -6,8 +6,7 @@ const options = {
   params: {
     part: "snippet",
     maxResults: "50",
-    regionCode: "EG",
-    order: "date",
+    regionCode: "US",
   },
   headers: {
     "X-RapidAPI-Key": `${import.meta.env.VITE_RAPID_API_KEY}`,

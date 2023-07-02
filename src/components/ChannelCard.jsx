@@ -9,7 +9,9 @@ function ChannelCard({ channel }) {
         <img src={channel?.snippet?.thumbnails?.medium?.url} alt="img" />
       </div>
       <div className="text">
-        <div className="description">{channel.snippet.title.slice(0, 50)}</div>
+        <Link to={`/channel/${channel.id.channelId}`} className="description">
+          {channel.snippet.title.slice(0, 50)}
+        </Link>
         <Link to={`/channel/${channel.id.channelId}`} className="channel_name">
           @{channel?.snippet?.channelTitle}
         </Link>
