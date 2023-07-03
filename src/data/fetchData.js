@@ -1,16 +1,13 @@
 import axios from "axios";
 
-const BASE_URL = "https://youtube-v31.p.rapidapi.com";
+const BASE_URL = "https://www.googleapis.com/youtube/v3";
 
 const options = {
   params: {
     part: "snippet",
-    maxResults: "50",
     regionCode: "US",
-  },
-  headers: {
-    "X-RapidAPI-Key": `${import.meta.env.VITE_RAPID_API_KEY}`,
-    "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+    maxResults: "50",
+    key: `${import.meta.env.VITE_RAPID_API_KEY}`,
   },
 };
 

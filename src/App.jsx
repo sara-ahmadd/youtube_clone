@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import "./../src/css/index.css";
 import Navbar from "./components/Navbar";
 import SideBar from "./components/SideBar";
@@ -7,42 +7,56 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import VideoDetails from "./components/VideoDetails";
 import ChannelDetails from "./components/ChannelDetails";
 
+export const sideBarAndCategory_context = createContext();
+
 function App() {
-  const [hideSidebar, setHideSidebar] = useState(true);
+  const [sidebar, setHideSidebar] = useState(true);
   const [categorySelected, setCategorySelected] = useState("New");
+
+  const changeTheSelectedCategor = (text) => {
+    setCategorySelected(text);
+  };
+  const showSideBar = () => {
+    setHideSidebar(!sidebar);
+  };
+
+  const contextObject = {
+    showSideBar,
+    sidebar,
+    changeTheSelectedCategor,
+    categorySelected,
+  };
+
   return (
     <BrowserRouter>
-      <div className="App">
-        <Navbar
-          side_bar={hideSidebar}
-          set_side_bar={setHideSidebar}
-          categorySelected={categorySelected}
-          setCategorySelected={setCategorySelected}
-        />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                side_bar={hideSidebar}
-                categorySelected={categorySelected}
-                setCategorySelected={setCategorySelected}
-              />
-            }
-          />
-          <Route path="/video/:video_Id" element={<VideoDetails />} />
-          <Route
-            path="/channel/:channel_Id"
-            element={
-              <ChannelDetails
-                side_bar={hideSidebar}
-                categorySelected={categorySelected}
-                setCategorySelected={setCategorySelected}
-              />
-            }
-          />
-        </Routes>
-      </div>
+      <sideBarAndCategory_context.Provider value={contextObject}>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                // side_bar={hideSidebar}
+                // categorySelected={categorySelected}
+                // setCategorySelected={setCategorySelected}
+                />
+              }
+            />
+            <Route path="/video/:video_Id" element={<VideoDetails />} />
+            <Route
+              path="/channel/:channel_Id"
+              element={
+                <ChannelDetails
+                  // side_bar={hideSidebar}
+                  // categorySelected={categorySelected}
+                  // setCategorySelected={setCategorySelected}
+                />
+              }
+            />
+          </Routes>
+        </div>
+      </sideBarAndCategory_context.Provider>
     </BrowserRouter>
   );
 }

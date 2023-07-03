@@ -15,9 +15,6 @@ function ChannelCard({ channel }) {
         <Link to={`/channel/${channel.id.channelId}`} className="channel_name">
           @{channel?.snippet?.channelTitle}
         </Link>
-        <div className="views">
-          <p>{channel?.snippet?.publishedAt}</p>
-        </div>
       </div>
     </div>
   );

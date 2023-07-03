@@ -1,6 +1,7 @@
 @import "./global/colors.scss";
 
 .side_bar {
+  z-index: 999;
   background-color: $white;
   position: fixed;
   display: flex;

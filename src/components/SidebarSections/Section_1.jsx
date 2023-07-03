@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdHomeFilled } from "react-icons/md";
 import shorts from "./../../images/blach-shorts.svg";
 import subs from "./../../images/subscription.svg";
 import "./../../css/sidebar.css";
 import { Link, NavLink } from "react-router-dom";
+import { sideBarAndCategory_context } from "../../App";
 
-function Section_1({ categorySelected, setCategorySelected }) {
+function Section_1() {
+  const { changeTheSelectedCategor } = useContext(sideBarAndCategory_context);
   return (
     <>
       <div className="section">
         <div className="icons_list">
           <button
             className="list_item"
-            onClick={() => setCategorySelected("Latest")}
+            onClick={() => changeTheSelectedCategor("Latest")}
           >
             <div className="content">
               <MdHomeFilled />
@@ -21,7 +23,7 @@ function Section_1({ categorySelected, setCategorySelected }) {
           </button>
           <button
             className="list_item"
-            onClick={() => setCategorySelected("Shorts")}
+            onClick={() => changeTheSelectedCategor("Shorts")}
           >
             <div className="content">
               <div>
@@ -32,7 +34,7 @@ function Section_1({ categorySelected, setCategorySelected }) {
           </button>
           <button
             className="list_item"
-            onClick={() => setCategorySelected("Subscriptions")}
+            onClick={() => changeTheSelectedCategor("Subscriptions")}
           >
             <div className="content">
               <div>

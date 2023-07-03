@@ -1,4 +1,5 @@
 .side_bar {
+  z-index: 999;
   background-color: #fff;
   position: fixed;
   display: flex;

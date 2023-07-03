@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdHomeFilled } from "react-icons/md";
 import shorts from "./../images/blach-shorts.svg";
 import subs from "./../images/subscription.svg";
 import library from "./../images/library_icon.svg";
 import "./../css/mini_sidebar.css";
 import { NavLink } from "react-router-dom";
+import { sideBarAndCategory_context } from "../App";
 
-function MiniSideBar({ setCategorySelected }) {
+function MiniSideBar() {
+  const { changeTheSelectedCategor } = useContext(sideBarAndCategory_context);
   return (
     <div className="mini_side_bar">
       <div className="section">
         <ul className="icons_list">
           <button
             className="list_item"
-            onClick={() => setCategorySelected("Latest")}
+            onClick={() => changeTheSelectedCategor("Latest")}
           >
             <div className="content">
               <MdHomeFilled />

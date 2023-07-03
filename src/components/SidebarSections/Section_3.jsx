@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import trend from "./../../images/trend.svg";
 import music from "./../../images/music.svg";
 import live from "./../../images/live.svg";
@@ -7,8 +7,10 @@ import cup from "./../../images/cup.svg";
 import "./../../css/sidebar.css";
 import { Link, NavLink } from "react-router-dom";
 import Section from "./Section";
+import { sideBarAndCategory_context } from "../../App";
 
-function Section_3({ categorySelected, setCategorySelected }) {
+function Section_3() {
+  const { changeTheSelectedCategor } = useContext(sideBarAndCategory_context);
   const staticData = [
     { img: trend, text: "Trending" },
     { img: music, text: "Music" },
@@ -20,7 +22,7 @@ function Section_3({ categorySelected, setCategorySelected }) {
     <Section
       title={"Explore"}
       data={staticData}
-      setCategorySelected={setCategorySelected}
+      setCategorySelected={changeTheSelectedCategor}
     />
   );
 }

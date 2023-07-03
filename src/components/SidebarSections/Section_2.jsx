@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import library from "./../../images/library_icon.svg";
 import history from "./../../images/history.svg";
 import video from "./../../images/video.svg";
@@ -8,8 +8,11 @@ import "./../../css/sidebar.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link, NavLink } from "react-router-dom";
 import Section from "./Section";
+import { sideBarAndCategory_context } from "../../App";
 
-function Section_2({ categorySelected, setCategorySelected }) {
+function Section_2() {
+
+  const { changeTheSelectedCategor } = useContext(sideBarAndCategory_context);
   const staticData = [
     { img: library, text: "Library" },
     { img: history, text: "History" },
@@ -21,7 +24,7 @@ function Section_2({ categorySelected, setCategorySelected }) {
     <Section
       title={"Explore"}
       data={staticData}
-      setCategorySelected={setCategorySelected}
+      setCategorySelected={changeTheSelectedCategor}
     />
   );
 }

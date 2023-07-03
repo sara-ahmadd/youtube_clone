@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import fetchVideos from "../data/fetchData";
 import VideosGrid from "./VideosGrid";
 import "./../css/channel_details.css";
 import MiniSideBar from "./MiniSideBar";
 import SideBar from "./SideBar";
+import { sideBarAndCategory_context } from "../App";
 
-function ChannelDetails({ side_bar, categorySelected, setCategorySelected }) {
+function ChannelDetails() {
   const { channel_Id } = useParams();
   const [channel, setChannel] = useState(null);
   const [videos, setVideos] = useState([]);
-  const url = `channels?id=${channel_Id}`;
-  const url_2 = `search?channelId=${channel_Id}&order=date`;
+  const url = `channels?order=date&part=snippet,statistics&id=${channel_Id}`;
+  const url_2 = `search?channelId=${channel_Id}`;
+
+  const { sidebar } = useContext(sideBarAndCategory_context);
 
   useEffect(() => {
     fetchVideos(url).then((res) => {
@@ -30,12 +33,7 @@ function ChannelDetails({ side_bar, categorySelected, setCategorySelected }) {
   ).toLocaleString();
   return (
     <div className="container ">
-      {side_bar && (
-        <SideBar
-          categorySelected={categorySelected}
-          setCategorySelected={setCategorySelected}
-        />
-      )}
+      {sidebar && <SideBar />}
       <div className="channel">
         <div className="profile">
           <div className="img">

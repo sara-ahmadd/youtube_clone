@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./../css/video_card.css";
 import { Link } from "react-router-dom";
+import { BsCheckCircleFill } from "react-icons/bs";
 
 function VideoCard({ video }) {
   return (
@@ -17,6 +18,7 @@ function VideoCard({ video }) {
           className="channel_name"
         >
           {video.snippet.channelTitle}
+          <BsCheckCircleFill />
         </Link>
         <div className="views">
           <p>Published at {video?.snippet?.publishedAt.slice(0, 10)}</p>
