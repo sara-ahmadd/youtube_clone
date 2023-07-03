@@ -33,27 +33,9 @@ function App() {
         <div className="App">
           <Navbar />
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                // side_bar={hideSidebar}
-                // categorySelected={categorySelected}
-                // setCategorySelected={setCategorySelected}
-                />
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route path="/video/:video_Id" element={<VideoDetails />} />
-            <Route
-              path="/channel/:channel_Id"
-              element={
-                <ChannelDetails
-                  // side_bar={hideSidebar}
-                  // categorySelected={categorySelected}
-                  // setCategorySelected={setCategorySelected}
-                />
-              }
-            />
+            <Route path="/channel/:channel_Id" element={<ChannelDetails />} />
           </Routes>
         </div>
       </sideBarAndCategory_context.Provider>
