@@ -21,6 +21,12 @@
 .video_card .text .views {
   padding: 10px;
 }
+.video_card .text .channel_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 .video_card .text .views {
   display: flex;
   justify-content: center;

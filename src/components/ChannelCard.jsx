@@ -1,6 +1,7 @@
 import React from "react";
 import "./../css/video_card.css";
 import { Link } from "react-router-dom";
+import { BsCheckCircleFill } from "react-icons/bs";
 
 function ChannelCard({ channel }) {
   return (
@@ -13,7 +14,8 @@ function ChannelCard({ channel }) {
           {channel.snippet.title.slice(0, 50)}
         </Link>
         <Link to={`/channel/${channel.id.channelId}`} className="channel_name">
-          @{channel?.snippet?.channelTitle}
+          <span className="title"> @{channel?.snippet?.channelTitle}</span>
+          <BsCheckCircleFill />
         </Link>
       </div>
     </div>

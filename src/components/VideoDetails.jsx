@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import fetchVideos from "../data/fetchData";
 import "./../css/video_details.css";
@@ -45,7 +45,12 @@ function VideoDetails() {
             <div className="text">
               <h3>{video?.snippet?.title}</h3>
               <div className="channel_title">
-                <h4>{video?.snippet?.channelTitle}</h4>
+                <Link
+                  to={`/channel/${video?.snippet?.channelId}`}
+                  className="channel_link"
+                >
+                  {video?.snippet?.channelTitle}
+                </Link>
                 <BsCheckCircleFill />
               </div>
             </div>

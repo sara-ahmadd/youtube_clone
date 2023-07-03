@@ -17,7 +17,7 @@ function VideoCard({ video }) {
           to={`/channel/${video.snippet.channelId}`}
           className="channel_name"
         >
-          {video.snippet.channelTitle}
+          <span className="title">{video.snippet.channelTitle}</span>
           <BsCheckCircleFill />
         </Link>
         <div className="views">

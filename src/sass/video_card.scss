@@ -49,6 +49,12 @@
       color: $dark-grey;
       font-size: 15px;
     }
+    .channel_name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
     .description {
       color: $black;
       word-wrap: break-word;

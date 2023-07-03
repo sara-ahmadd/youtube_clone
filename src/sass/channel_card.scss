@@ -21,6 +21,12 @@
     .views {
       padding: 10px;
     }
+    .channel_name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
     .views {
       display: flex;
       justify-content: center;

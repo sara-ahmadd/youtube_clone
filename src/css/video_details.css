@@ -47,6 +47,9 @@
   align-items: center;
   gap: 10px;
 }
+.video_details .video_box .details .text .channel_title .channel_link {
+  color: #000;
+}
 .video_details .video_box .details .text .channel_title svg {
   color: grey;
 }

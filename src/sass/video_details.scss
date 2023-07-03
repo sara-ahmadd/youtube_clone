@@ -39,6 +39,9 @@
           display: flex;
           align-items: center;
           gap: 10px;
+          .channel_link {
+            color: $black;
+          }
           svg {
             color: $very-dark-grey;
           }

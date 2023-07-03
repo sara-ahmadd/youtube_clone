@@ -57,6 +57,13 @@
   color: rgb(177, 175, 175);
   font-size: 15px;
 }
+.video_card .text .channel_name,
+.channel_card .text .channel_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 .video_card .text .description,
 .channel_card .text .description {
   color: #000;
