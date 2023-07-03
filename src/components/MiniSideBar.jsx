@@ -4,7 +4,6 @@ import shorts from "./../images/blach-shorts.svg";
 import subs from "./../images/subscription.svg";
 import library from "./../images/library_icon.svg";
 import "./../css/mini_sidebar.css";
-import { NavLink } from "react-router-dom";
 import { sideBarAndCategory_context } from "../App";
 
 function MiniSideBar() {

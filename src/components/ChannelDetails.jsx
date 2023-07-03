@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import fetchVideos from "../data/fetchData";
 import VideosGrid from "./VideosGrid";
 import "./../css/channel_details.css";
-import MiniSideBar from "./MiniSideBar";
 import SideBar from "./SideBar";
 import { sideBarAndCategory_context } from "../App";
 
@@ -19,12 +18,10 @@ function ChannelDetails() {
   useEffect(() => {
     fetchVideos(url).then((res) => {
       setChannel(res[0]);
-      console.log(channel);
     });
 
     fetchVideos(url_2).then((res) => {
       setVideos(res);
-      console.log(videos);
     });
   }, [channel_Id]);
 

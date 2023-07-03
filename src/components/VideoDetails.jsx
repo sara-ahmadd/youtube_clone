@@ -1,18 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import fetchVideos from "../data/fetchData";
 import "./../css/video_details.css";
 import { BsCheckCircleFill } from "react-icons/bs";
 import VideoCard from "./VideoCard";
-import { sideBarAndCategory_context } from "../App";
-import SideBar from "./SideBar";
+
 function VideoDetails() {
   const { video_Id } = useParams();
   const [video, setVideo] = useState(null);
   const [videosSuggested, setVideosSuggested] = useState([]);
-
-  // const { sidebar } = useContext(sideBarAndCategory_context);
 
   const url = `videos?part=snippet,statistics&id=${video_Id}`;
   const url_2 = `search?part=snippet&type=video&relatedToVideoId=${video_Id}`;
@@ -20,18 +17,15 @@ function VideoDetails() {
   useEffect(() => {
     fetchVideos(url).then((res) => {
       setVideo(res[0]);
-      console.log(video);
     });
     fetchVideos(url_2).then((res) => {
       setVideosSuggested(res);
-      console.log(videosSuggested);
     });
   }, [video_Id]);
   const views = parseInt(video?.statistics?.viewCount).toLocaleString();
   const likes = parseInt(video?.statistics?.likeCount).toLocaleString();
   return (
     <div className="container">
-      {/* {sidebar && <SideBar />} */}
       <div className="video_details">
         <div className="video_box">
           <ReactPlayer

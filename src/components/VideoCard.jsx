@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./../css/video_card.css";
 import { Link } from "react-router-dom";
 import { BsCheckCircleFill } from "react-icons/bs";

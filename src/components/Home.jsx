@@ -2,8 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import fetchVideos from "../data/fetchData";
 import SideBar from "./SideBar";
 import MiniSideBar from "./MiniSideBar";
-import VideoCard from "./VideoCard";
-import ChannelCard from "./ChannelCard";
 import "./../css/home.css";
 import VideosGrid from "./VideosGrid";
 import { sideBarAndCategory_context } from "../App";
@@ -17,7 +15,6 @@ function Home() {
     const url = `search?q=${categorySelected}`;
     fetchVideos(url).then((res) => {
       setVideos(res);
-      console.log(res);
     });
   }, [categorySelected]);
 
